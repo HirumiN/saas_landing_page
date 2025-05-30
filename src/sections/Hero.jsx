@@ -4,17 +4,10 @@ import { Button } from "../components/Button";
 
 export const Hero = () => {
   return (
-    <section className="relative pb-40 overflow-hidden pt-60 max-lg:pt-52 max-md:pt-36 max-md:pb-32 max-lg:pb-36">
-      {" "}
-      {/* Tambahkan overflow-hidden jika gambar sangat besar dan menyebabkan scroll horizontal */}
+    <section className="relative pb-40 pt-60 max-lg:pt-52 max-md:pt-36 max-md:pb-32 max-lg:pb-36">
       <Element name="hero">
-        {/* Kontainer untuk Teks */}
-        <div className="container relative z-10">
-          {" "}
-          {/* Pastikan kontainer teks punya z-index jika gambar di belakangnya */}
-          <div className="max-w-512 max-lg:max-w-388">
-            {" "}
-            {/* Tidak perlu relative z-2 di sini lagi jika gambar terpisah */}
+        <div className="container">
+          <div className="relative z-2 max-w-512 max-lg:max-w-388">
             <div className="uppercase caption small-2 text-p3">
               Video Editing
             </div>
@@ -28,21 +21,19 @@ export const Hero = () => {
             <LinkScroll to="features" smooth={true} spy offset={-100}>
               <Button icon="/images/zap.svg">Try it now</Button>
             </LinkScroll>
+          
           </div>
+        
         </div>
-
-        {/* Div untuk Gambar - Dipindahkan keluar dari .container dan menjadi child langsung dari section */}
         <div
           className="absolute -top-32 w-[1230px] pointer-events-none 
-                     left-[calc(50%-340px)] /* Posisi default untuk mobile/tablet, PERLU DIUJI & DISESUAIKAN */
-                     lg:left-auto          /* Hapus positioning kiri pada layar besar */
-                     lg:right-0            /* Tempelkan ke kanan pada layar besar */
+                     left-[calc(50%-340px)] 
                      hero-img_res          
-                     z-0" /* Pastikan gambar di belakang teks jika tumpang tindih */
+                     z-0"                 
         >
           <img
             src="/images/hero.png"
-            className="w-full h-auto max-lg:h-auto" /* Ganti size-1230 menjadi w-full h-auto agar responsif terhadap parent div-nya */
+            className="w-full h-auto max-lg:h-auto"
             alt="hero"
           />
         </div>

@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full py-10">
-      <div className="container flex items-center h-14 max-lg:px-5">
+      <div className="container flex items-center h-14 max-lg:px-5 max-w-[2040px]">
         <a className="flex-1 cursor-pointer lg:hidden z-2" href="#">
           <img src="/images/xora.svg" alt="logo" width={115} height={55} />
         </a>

@@ -313,3 +313,18 @@
 
   /*  END of Footer*/
 }
+.faq-answer-container {
+  transition-property: max-height, opacity, visibility; /* Tambahkan visibility untuk aksesibilitas */
+  transition-duration: 500ms; /* Sesuaikan dengan durasi di clsx */
+  transition-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.faq-answer-container:not(.max-h-0) { /* Terapkan visibility saat terbuka */
+  visibility: visible;
+}
+
+.max-h-faq {
+  max-height: 0;
+  visibility: hidden; /* Sembunyikan dari screen reader saat tertutup */
+}
